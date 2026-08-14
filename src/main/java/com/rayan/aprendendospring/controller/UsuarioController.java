@@ -5,7 +5,6 @@ import com.rayan.aprendendospring.controller.dtos.UsuarioDTO;
 import com.rayan.aprendendospring.infrastructure.entify.UsuarioLombok;
 import com.rayan.aprendendospring.infrastructure.security.JwtUtil;
 import lombok.RequiredArgsConstructor;
-import org.apache.coyote.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -23,7 +22,7 @@ public class UsuarioController {
 
     @PostMapping
     public ResponseEntity<UsuarioLombok> salvaUsuario(@RequestBody UsuarioLombok usuario){
-        return ResponseEntity.ok(usuarioService.salvaUsuario(usuario));
+        return ResponseEntity.ok(usuarioService.salvarUsuario(usuario));
     }
 
     @PostMapping("/login")

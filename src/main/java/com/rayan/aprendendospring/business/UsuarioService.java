@@ -17,7 +17,7 @@ public class UsuarioService {
     private final UsuarioRepository usuarioRepository;
     private final PasswordEncoder passwordEncoder;
 
-    public UsuarioLombok salvaUsuario(UsuarioLombok usuario) {
+    public UsuarioLombok salvarUsuario(UsuarioLombok usuario) {
         try {
             emailExiste(usuario.getEmail());
             usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
