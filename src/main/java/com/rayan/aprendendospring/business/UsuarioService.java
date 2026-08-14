@@ -25,6 +25,7 @@ public class UsuarioService {
         } catch (ConflictException e) {
             throw new ConflictException("Email já cadastrado" + e.getCause());
         }
+
     }
 
     public void emailExiste(String email){
